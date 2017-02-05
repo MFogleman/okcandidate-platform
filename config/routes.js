@@ -55,6 +55,24 @@ module.exports = [
   },
 
   {
+    method: 'POST',
+    path: '/api/v1/user/edit',
+    handler: 'UserController.update'
+  },
+
+  {
+    method: 'GET',
+    path: '/api/v1/user',
+    handler: 'UserController.getAll'
+  },
+
+  {
+    method: 'GET',
+    path: '/api/v1/user/{id*}',
+    handler: 'UserController.getOne'
+  },
+
+  {
     method: [ 'GET' ],
     path: '/api/v1/default/info',
     handler: 'DefaultController.info'
